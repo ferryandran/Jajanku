@@ -79,7 +79,7 @@ svg{display:block}
 
 /* ============ Views ============ */
 .view{display:none}
-.view.active{display:block}
+.view.active{display:flex;flex-direction:column}
 .view{padding:26px 0 40px}
 
 /* ============ Header ============ */
@@ -217,7 +217,7 @@ svg{display:block}
 .home-all-products{margin-top:22px;display:inline-flex;align-items:center;gap:8px;background:none;border:0;color:var(--blue);font-weight:800;font-size:15px;padding:0}
 
 /* ============ Footer ============ */
-.site-footer{margin-top:60px;background:#0b1526;color:#b7c4d8}
+.site-footer{margin-top:auto;padding-top:40px;background:#0b1526;color:#b7c4d8}
 .site-footer-main{display:grid;grid-template-columns:1.3fr 2fr;gap:36px;padding:46px 0 30px}
 .footer-logo{font-size:26px;font-weight:800;color:#fff;letter-spacing:.5px}
 .site-footer-brand p{margin:12px 0;color:#93a5bd;font-size:14px;max-width:340px}
