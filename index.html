@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0869f8">
+  <meta name="application-name" content="JAJANANKU">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>JAJANANKU — Produk Digital & Akses Premium</title>
+  <meta name="description" content="Temukan produk digital dan akses premium di JAJANANKU dengan katalog yang jelas, proses praktis, status pesanan, dan dukungan pelanggan.">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JAJANANKU">
+  <meta property="og:title" content="JAJANANKU — Produk Digital & Akses Premium">
+  <meta property="og:description" content="Semua kebutuhan digital dalam satu tempat. Jelajahi produk, cek stok, dan pantau pesanan langsung dari JAJANANKU.">
+  <meta property="og:url" content="https://jajananku.web.id/">
+  <meta property="og:image" content="https://jajananku.web.id/assets/v6/jajananku-mascot.jpg">
+  <meta property="og:image:alt" content="JAJANANKU — Makin Mudah, Makin Enak">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JAJANANKU — Produk Digital & Akses Premium">
+  <meta name="twitter:description" content="Semua kebutuhan digital dalam satu tempat. Jelajahi produk dan pantau pesanan di JAJANANKU.">
+  <meta name="twitter:image" content="https://jajananku.web.id/assets/v6/jajananku-mascot.jpg">
+  <link rel="icon" type="image/png" href="/assets/logo-jajananku.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#homeView">Lewati ke konten utama</a>
+  <div class="desktop-stage">
+    <div class="app-shell" id="appShell">
+
+      <header id="mainHeader" class="site-header">
+        <div class="container header-inner">
+          <button class="brand" type="button" id="brandBtn" onclick="goHome()">
+            <span class="brand-mark">J</span>
+            <span>JAJANANKU<small>MAKIN MUDAH, MAKIN ENAK</small></span>
+          </button>
+          <nav class="header-nav">
+            <a href="#/home" onclick="event.preventDefault();goHome()">Beranda</a>
+            <a href="#/explore" onclick="event.preventDefault();goExplore()">Semua Produk</a>
+            <a href="#/cek" onclick="event.preventDefault();navigate('/cek')">Cek Pesanan</a>
+          </nav>
+          <div class="header-actions">
+            <button class="icon-btn" type="button" data-action="inbox" aria-label="Notifikasi">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9.7 21h4.6"/></svg>
+              <span class="head-dot" hidden></span>
+            </button>
+            <button class="icon-btn" type="button" data-action="cart" aria-label="Keranjang">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20 8H7M10 20h.01M17 20h.01"/></svg>
+              <span class="head-badge">0</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main id="homeView" class="view active" tabindex="-1">
+        <section class="home-blue-zone">
+          <div class="container">
+            <div class="search-pill home-search">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.4-3.4"></path></svg>
+              <input id="searchInput" type="search" placeholder="Cari produk, brand, atau apa saja..." autocomplete="off">
+            </div>
+            <section class="hero-card">
+              <div class="hero-glow hero-glow-a"></div>
+              <div class="hero-glow hero-glow-b"></div>
+              <div class="hero-copy">
+                <span class="hero-kicker">SEMUA JAJANAN FAVORIT</span>
+                <h1 class="hero-title">Semua Jajananmu<br>Dalam Satu Tempat</h1>
+                <p class="hero-sub">Pilihan jajanan trending dengan rasa terbaik, harga jelas, dan proses yang mudah.</p>
+                <button class="hero-cta" type="button" onclick="scrollProducts()">Mulai Belanja <span>→</span></button>
+              </div>
+              <div class="hero-mascot-wrap">
+                <svg class="hero-mascot" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.14)"/>
+                  <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,255,255,.35)"/>
+                  <circle cx="33" cy="43" r="7" fill="#fff"/>
+                  <circle cx="87" cy="43" r="7" fill="#fff"/>
+                  <rect x="40" y="38" width="40" height="32" rx="14" fill="#fff"/>
+                  <circle cx="52" cy="54" r="3.4" fill="#0869f8"/>
+                  <circle cx="68" cy="54" r="3.4" fill="#0869f8"/>
+                  <path d="M50 62 Q60 69 70 62" stroke="#7c3aed" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                  <line x1="60" y1="38" x2="60" y2="26" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="60" cy="22" r="4" fill="#fff"/>
+                </svg>
+                <span class="spark spark-a">✦</span><span class="spark spark-b">✦</span><span class="spark spark-c">✧</span>
+              </div>
+            </section>
+            <div id="trustStrip" class="trust-strip">
+              <div class="trust-item">
+                <div class="trust-icon">🔥</div>
+                <div><b>Jajanan Fresh</b><span>Dibuat fresh setiap hari</span></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">📦</div>
+                <div><b>Pengiriman Cepat</b><span>Sampai di hari yang sama</span></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">✅</div>
+                <div><b>Halal & Higienis</b><span>Bahan berkualitas terjamin</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-content">
+          <div class="container">
+            <section class="section-block" id="categories">
+              <div class="section-head"><div><h2>Kategori Produk</h2><p>Pilih kebutuhan digitalmu</p></div></div>
+              <div class="shortcut-row" id="categoryGrid"></div>
+            </section>
+            <section class="section-block" id="products">
+              <div class="section-head compact home-rec-head">
+                <div><h2>Rekomendasi Untuk Kamu</h2><p>4 pilihan terbaik untuk kamu hari ini</p></div>
+              </div>
+              <div id="recommendedGrid" class="product-grid"></div>
+              <button class="home-all-products" type="button" onclick="goExplore()">Lihat semua produk <span>→</span></button>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer-main">
+          <div class="site-footer-brand">
+            <div class="footer-logo">JAJANANKU</div>
+            <p>Platform jajanan trending dengan rasa terbaik, harga jelas, dan proses pembelian yang mudah.</p>
+            <span>JAJANANKU — Makin Mudah, Makin Enak</span>
+          </div>
+          <div class="site-footer-links">
+            <div><b>Belanja</b><a href="#/home" onclick="event.preventDefault();goHome()">Beranda</a><a href="#/explore" onclick="event.preventDefault();goExplore()">Semua Produk</a><a href="#/cek" onclick="event.preventDefault();navigate('/cek')">Cek Pesanan</a></div>
+            <div><b>Bantuan</b><a href="#/akun" onclick="event.preventDefault();openMember('help')">Akun Member</a><a href="#/kontak" onclick="event.preventDefault();navigate('/kontak')">Kontak & Bantuan</a><a href="#/akun" onclick="event.preventDefault();openMember('help')">Pusat Bantuan</a><a href="#/akun" onclick="event.preventDefault();openMember('developer')">Developer API</a></div>
+            <div><b>Informasi</b><a href="#/informasi/privacy" onclick="event.preventDefault();navigate('/informasi/privacy')">Kebijakan Privasi</a><a href="#/informasi/terms" onclick="event.preventDefault();navigate('/informasi/terms')">Syarat & Ketentuan</a><a href="#/informasi/refund" onclick="event.preventDefault();navigate('/informasi/refund')">Kebijakan Refund</a><a href="#/informasi/digital-products" onclick="event.preventDefault();navigate('/informasi/digital-products')">Kebijakan Produk Digital</a></div>
+          </div>
+        </div>
+        <div class="container site-footer-bottom">
+          <span>© 2026 JAJANANKU</span>
+          <span>Pembayaran dan data pesanan diproses sesuai kebutuhan transaksi.</span>
+        </div>
+      </footer>
+
+      <main id="exploreView" class="view">
+        <section class="white-page">
+          <header class="white-topbar">
+            <button class="mini-brand" type="button" onclick="goHome()">
+              <span class="brand-mark">J</span> JAJANANKU
+            </button>
+            <div class="white-actions">
+              <button class="icon-btn ghost" type="button" data-action="inbox" aria-label="Notifikasi">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9.7 21h4.6"/></svg>
+              </button>
+              <button class="icon-btn ghost" type="button" data-action="cart" aria-label="Keranjang">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20 8H7M10 20h.01M17 20h.01"/></svg>
+                <span class="head-badge">0</span>
+              </button>
+            </div>
+          </header>
+          <div class="container">
+            <div class="search-pill light-search">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.4-3.4"></path></svg>
+              <input id="exploreSearch" type="search" placeholder="Cari kategori atau produk..." autocomplete="off">
+            </div>
+            <div id="exploreTabs" class="explore-tabs"></div>
+            <section class="explore-promo-banner">
+              <div>
+                <small>JAJANANKU RECOMMENDS</small>
+                <h2>Temukan Jajanan Favoritmu</h2>
+                <p>Semua jajanan trending dalam satu genggaman.</p>
+                <button class="btn" type="button" onclick="scrollProducts()">Jelajahi Sekarang <span>→</span></button>
+              </div>
+              <svg class="hero-mascot" viewBox="0 0 120 120" aria-hidden="true" style="width:110px;height:110px">
+                <circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.16)"/>
+                <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,255,255,.35)"/>
+                <circle cx="33" cy="43" r="7" fill="#fff"/>
+                <circle cx="87" cy="43" r="7" fill="#fff"/>
+                <rect x="40" y="38" width="40" height="32" rx="14" fill="#fff"/>
+                <circle cx="52" cy="54" r="3.4" fill="#0a3ea8"/>
+                <circle cx="68" cy="54" r="3.4" fill="#0a3ea8"/>
+                <path d="M50 62 Q60 69 70 62" stroke="#7c3aed" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                <line x1="60" y1="38" x2="60" y2="26" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="60" cy="22" r="4" fill="#fff"/>
+              </svg>
+            </section>
+            <section class="section-block explore-products" id="exploreProducts">
+              <div class="section-head compact">
+                <div><h2>Semua Produk</h2><p>Temukan semua jajanan JAJANANKU</p></div>
+                <span id="exploreCount" class="badge">0 Produk</span>
+              </div>
+              <div id="exploreGrid" class="product-grid"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <main id="productView" class="view">
+        <section class="white-page product-page">
+          <header class="detail-topbar">
+            <button class="circle-back" type="button" onclick="history.back()" aria-label="Kembali">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="detail-top-actions">
+              <button class="circle-action" type="button" data-wishlist aria-label="Wishlist">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+              </button>
+              <button class="circle-action" type="button" data-share aria-label="Bagikan">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.6 6.8-4M8.6 13.4l6.8 4"/></svg>
+              </button>
+            </div>
+          </header>
+          <div class="container">
+            <div id="productDetail"></div>
+            <section class="section-block" id="relatedProducts"></section>
+          </div>
+        </section>
+      </main>
+
+      <main id="cartView" class="view">
+        <section class="white-page cart-page">
+          <header class="cart-topbar">
+            <button class="circle-back" type="button" onclick="goExplore()" aria-label="Kembali">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="cart-title-wrap"><h1>Checkout</h1><small>Pastikan pesananmu sudah benar</small></div>
+            <button class="cart-clear" type="button" onclick="clearCart()">Hapus</button>
+          </header>
+          <div class="container">
+            <div class="checkout-stepper" id="coStepper">
+              <div class="step" id="coStepIndicator1"><i>1</i><span>Keranjang</span></div><b></b>
+              <div class="step" id="coStepIndicator2"><i>2</i><span>Pembayaran</span></div><b></b>
+              <div class="step" id="coStepIndicator3"><i>3</i><span>Selesai</span></div>
+            </div>
+            <section id="coStepKeranjang">
+              <div class="checkout-section-card cart-products-card">
+                <div class="checkout-section-head"><div><span>Pesanan</span><h2>Produk yang dipilih</h2></div><em id="cartTitleCount">(0)</em></div>
+                <div class="cart-select-row"><label><input type="checkbox" checked onchange="this.checked=true"> Pilih semua produk</label></div>
+                <div id="cartLines"></div>
+              </div>
+              <div class="checkout-section-card coupon-card">
+                <div class="checkout-section-head"><div><span>Promo</span><h2>Kode Promo / Voucher</h2></div></div>
+                <div class="coupon-input-row"><input id="couponInput" placeholder="Masukkan kode promo"><button type="button" onclick="applyCoupon()">Pakai</button></div>
+                <div id="couponNotice" class="coupon-notice"></div>
+              </div>
+              <div id="cartSummary" class="checkout-section-card"></div>
+              <section class="checkout-trust">
+                <div class="shield">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div><b>Status Transaksi Tercatat</b><p>Pembayaran dan status pesanan diproses melalui alur JAJANANKU yang ditampilkan pada halaman pesanan.</p></div>
+              </section>
+              <div class="payment-logo-row"><span>BCA</span><span>Mandiri</span><span>BNI</span><span>DANA</span><span>QRIS</span></div>
+            </section>
+            <section id="coStepPembayaran" class="hidden-step">
+              <div class="checkout-section-card">
+                <div class="checkout-section-head"><div><span>Pembayaran</span><h2>Pilih Metode Pembayaran</h2></div></div>
+                <div id="paymentMethods"></div>
+                <div class="spread mt-16"><span class="muted">Total pembayaran</span><b style="font-size:22px;color:var(--blue)" id="payTotal">Rp 0</b></div>
+                <button class="btn btn-block mt-16" type="button" id="payButton">Bayar Sekarang</button>
+              </div>
+            </section>
+            <section id="coStepSelesai" class="hidden-step">
+              <div class="panel-card" style="text-align:center;margin-top:20px">
+                <div style="width:72px;height:72px;border-radius:50%;background:#d1fae5;color:#047857;display:grid;place-items:center;font-size:34px;margin:0 auto">✓</div>
+                <h2 class="mt-16">Pesanan Berhasil!</h2>
+                <p class="muted">Terima kasih sudah berbelanja di JAJANANKU. Status pesanan sudah tercatat.</p>
+                <div class="mt-16" style="background:#f6f9ff;border:1px solid var(--line);border-radius:14px;padding:14px">
+                  <small class="muted">Order ID</small>
+                  <div style="font-weight:800;font-size:18px;color:var(--blue)">#<span id="successOrderId"></span></div>
+                  <small class="muted">Total</small>
+                  <div id="successTotal" style="font-weight:800;font-size:18px"></div>
+                </div>
+                <div class="row mt-16" style="justify-content:center">
+                  <a class="btn" href="#/cek">Cek Status Pesanan <span>→</span></a>
+                  <button class="btn btn-outline" type="button" onclick="goHome()">Kembali Beranda</button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="cart-sticky-checkout" id="stickyCheckout">
+            <div><small>Total Pembayaran</small><b id="stickyCartTotal">Rp 0</b></div>
+            <button class="btn" type="button" id="checkoutButton">Checkout Sekarang</button>
+          </div>
+        </section>
+      </main>
+
+      <main id="accountView" class="view">
+        <section class="account-page">
+          <div class="account-blue-head">
+            <div class="container">
+              <header class="account-brand-row">
+                <button class="brand" type="button" id="brandBtn2" onclick="goHome()">
+                  <span class="brand-mark">J</span>
+                  <span>JAJANANKU<small>MAKIN MUDAH, MAKIN ENAK</small></span>
+                </button>
+                <div class="header-actions">
+                  <button class="icon-btn" type="button" data-action="inbox" aria-label="Notifikasi">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9.7 21h4.6"/></svg>
+                  </button>
+                  <button class="icon-btn" type="button" data-action="cart" aria-label="Keranjang">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20 8H7M10 20h.01M17 20h.01"/></svg>
+                    <span class="head-badge">0</span>
+                  </button>
+                </div>
+              </header>
+              <div class="account-profile-row">
+                <div class="member-avatar"><span id="avatarLetter">J</span></div>
+                <div class="profile-copy">
+                  <small id="memberStatusText">Member JAJANANKU</small>
+                  <h1 id="accountGreeting">Halo 👋</h1>
+                  <p id="accountSub">Masuk untuk mendapatkan pengalaman belanja yang lebih lengkap.</p>
+                  <span id="memberLevelBadge" class="member-level">Explorer</span>
+                </div>
+                <button class="account-gear" type="button" data-action="profile" aria-label="Pengaturan Akun">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                </button>
+              </div>
+              <div class="account-stats">
+                <button type="button" onclick="openMember('orders')"><b id="statOrders">0</b><span>Pesanan</span></button>
+                <button type="button" onclick="openMember('vouchers')"><b id="statVoucher">0</b><span>Voucher</span></button>
+                <button type="button" onclick="openMember('points')"><b id="statPoints">0</b><span>Poin</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="account-content container">
+            <section class="account-member-banner" id="benefitBanner">
+              <div>
+                <small id="benefitBannerLevel">Member JAJANANKU</small>
+                <h3 id="memberWelcomeTitle">Selamat Datang Kembali!</h3>
+                <p id="memberWelcomeText">Dapatkan benefit khusus, promo spesial, dan akses lebih lengkap.</p>
+                <button class="btn btn-sm" type="button" id="benefitButton" onclick="openMember('benefits')">Lihat Keuntungan <span>→</span></button>
+              </div>
+              <svg class="hero-mascot" viewBox="0 0 120 120" aria-hidden="true" style="width:110px;height:110px">
+                <circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.16)"/>
+                <circle cx="60" cy="60" r="56" fill="none" stroke="rgba(255,255,255,.35)"/>
+                <circle cx="33" cy="43" r="7" fill="#fff"/>
+                <circle cx="87" cy="43" r="7" fill="#fff"/>
+                <rect x="40" y="38" width="40" height="32" rx="14" fill="#fff"/>
+                <circle cx="52" cy="54" r="3.4" fill="#0a3ea8"/>
+                <circle cx="68" cy="54" r="3.4" fill="#0a3ea8"/>
+                <path d="M50 62 Q60 69 70 62" stroke="#7c3aed" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                <line x1="60" y1="38" x2="60" y2="26" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="60" cy="22" r="4" fill="#fff"/>
+              </svg>
+            </section>
+            <div class="account-menu" id="accountMenu"></div>
+            <button class="account-login-btn" type="button" id="accountLoginBtn" onclick="openAuth('login')">Masuk / Daftar Member</button>
+            <button class="account-logout-btn" type="button" id="accountLogoutBtn" onclick="logoutMember()">Keluar</button>
+          </div>
+        </section>
+      </main>
+
+      <main id="memberPanelView" class="view">
+        <section class="white-page member-subpage">
+          <header class="subpage-topbar">
+            <button class="circle-back" type="button" onclick="navigate('/akun')" aria-label="Kembali">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <h1 id="memberPanelTitle">Pesanan Saya</h1>
+            <div class="subpage-space"></div>
+          </header>
+          <div class="container member-panel-body" id="memberPanelBody"></div>
+        </section>
+      </main>
+
+      <main id="cekView" class="view">
+        <section class="white-page member-subpage">
+          <header class="subpage-topbar">
+            <button class="circle-back" type="button" onclick="goHome()" aria-label="Kembali">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <h1>Status Pesanan</h1>
+            <div class="subpage-space"></div>
+          </header>
+          <div class="container">
+            <div class="panel-card">
+              <h2>Cek Pesanan Kamu</h2>
+              <p class="muted small">Lihat status pembayaran, proses pesanan, dan produk terkirim dengan aman.</p>
+              <form id="orderCheckForm" class="mt-16" onsubmit="return false;">
+                <div class="row" style="flex-wrap:wrap">
+                  <input id="orderId" placeholder="Order ID" style="flex:1;min-width:200px;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14.5px;outline:0">
+                  <input id="whatsapp" placeholder="Nomor WhatsApp" inputmode="tel" style="flex:1;min-width:200px;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14.5px;outline:0">
+                  <button class="btn" type="submit">Cek Status Pesanan</button>
+                </div>
+              </form>
+              <div id="orderResult" class="mt-16"></div>
+              <p class="muted small mt-16">Data pesanan tetap privat. Order ID saja tidak cukup. Nomor WhatsApp juga harus cocok sebelum halaman pesanan dapat dibuka.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <main id="kontakView" class="view">
+        <section class="white-page member-subpage">
+          <header class="subpage-topbar">
+            <button class="circle-back" type="button" onclick="goHome()" aria-label="Kembali">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <h1>Kontak & Bantuan</h1>
+            <div class="subpage-space"></div>
+          </header>
+          <div class="container" id="kontakBody"></div>
+        </section>
+      </main>
+
+      <main id="infoView" class="view">
+        <section class="white-page member-subpage">
+          <header class="subpage-topbar">
+            <button class="circle-back" type="button" onclick="goHome()" aria-label="Kembali">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <h1 id="infoTitle">Informasi</h1>
+            <div class="subpage-space"></div>
+          </header>
+          <div class="container"><div id="infoBody" class="prose"></div></div>
+        </section>
+      </main>
+
+      <nav id="bottomNav" class="bottom-nav">
+        <button data-nav="home" type="button" onclick="navigate('/home')">
+          <svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-9Z"/></svg>
+          <b>Beranda</b>
+        </button>
+        <button data-nav="explore" type="button" onclick="navigate('/explore')">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          <b>Kategori</b>
+        </button>
+        <button data-nav="cart" type="button" onclick="openCart()">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L20 8H7M10 20h.01M17 20h.01"/></svg>
+          <b>Keranjang</b>
+        </button>
+        <button data-nav="orders" type="button" onclick="openMember('orders')">
+          <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+          <b>Pesanan</b>
+        </button>
+        <button data-nav="account" type="button" onclick="navigate('/akun')">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          <b>Akun</b>
+        </button>
+      </nav>
+
+      <div id="authModal" class="dialog-overlay" onclick="overlayClose(event,'authModal')">
+        <section class="dialog auth-dialog">
+          <button class="dialog-close" type="button" onclick="closeModal('authModal')">×</button>
+          <svg class="auth-mascot" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="56" fill="rgba(8,105,248,.08)"/>
+            <circle cx="60" cy="60" r="56" fill="none" stroke="#0869f8" stroke-width="2"/>
+            <rect x="40" y="38" width="40" height="32" rx="14" fill="#0869f8"/>
+            <circle cx="52" cy="54" r="3.4" fill="#fff"/>
+            <circle cx="68" cy="54" r="3.4" fill="#fff"/>
+            <path d="M50 62 Q60 69 70 62" stroke="#c7d2fe" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <line x1="60" y1="38" x2="60" y2="26" stroke="#0869f8" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="60" cy="22" r="4" fill="#0869f8"/>
+          </svg>
+          <span class="auth-chip">Member JAJANANKU</span>
+          <h2 id="authTitle">Selamat Datang Kembali</h2>
+          <p id="authText">Masuk untuk melanjutkan belanja dan mengakses pesanan.</p>
+          <form id="authForm" onsubmit="submitAuth(event); return false;">
+            <label>Nama Login
+              <input id="authName" name="username" maxlength="40" placeholder="Nama member" autocomplete="username" autocapitalize="none" spellcheck="false">
+            </label>
+            <label>PIN
+              <input id="authPin" name="current-password" type="password" inputmode="numeric" maxlength="12" placeholder="6–12 digit PIN" autocomplete="current-password">
+            </label>
+            <label id="confirmPinWrap" hidden>Ulangi PIN
+              <input id="authPin2" name="new-password" type="password" inputmode="numeric" maxlength="12" autocomplete="new-password">
+            </label>
+            <div id="authNotice" class="form-notice"></div>
+            <button class="auth-primary" type="submit" id="authSubmit">Masuk</button>
+            <button class="auth-forgot" type="button" id="authForgot" onclick="openRecovery('authModal')">Lupa PIN?</button>
+            <button class="auth-link" type="button" id="authSwitchBtn" onclick="toggleAuthMode()">Belum punya akun? Daftar</button>
+          </form>
+        </section>
+      </div>
+
+      <div id="recoveryModal" class="dialog-overlay" onclick="if(event.target===event.currentTarget)closeRecovery()">
+        <section class="dialog recovery-dialog">
+          <button class="dialog-close" type="button" onclick="closeRecovery()">×</button>
+          <div class="recovery-head">
+            <div class="recovery-icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div><small>PEMULIHAN AKUN</small><h2>Lupa PIN Member?</h2></div>
+          </div>
+          <p class="recovery-copy">Masukkan nama login dan nomor WhatsApp yang pernah terhubung ke akun. Demi keamanan, sistem tidak akan memberi tahu apakah data tersebut cocok.</p>
+          <form id="recoveryForm" onsubmit="submitRecovery(event); return false;">
+            <label class="recovery-field">Nama Login
+              <input id="recoveryName" maxlength="40" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="Nama member">
+            </label>
+            <label class="recovery-field">Nomor WhatsApp
+              <input id="recoveryPhone" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="08xxxxxxxxxx">
+              <small>Gunakan nomor yang pernah tersimpan di akun atau digunakan saat menghubungkan pesanan.</small>
+            </label>
+            <div class="recovery-security">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Admin akan memverifikasi permintaan sebelum memberikan link reset satu kali. Link reset berlaku terbatas dan tidak pernah menampilkan PIN lama.</span>
+            </div>
+            <div id="recoveryNotice" class="form-notice"></div>
+            <button class="recovery-primary" type="submit" id="recoverySubmit">Kirim Permintaan Pemulihan</button>
+            <div id="recoveryResult" class="recovery-result" hidden>
+              <small>KODE PEMULIHAN</small>
+              <div id="recoveryTicket" class="recovery-ticket"></div>
+              <p>Simpan kode ini lalu hubungi CS JAJANANKU dari nomor WhatsApp yang sama. Jika data akun cocok, admin dapat membuat link reset yang hanya berlaku sekali.</p>
+              <a id="recoveryWhatsapp" class="recovery-wa" href="#" target="_blank" rel="noopener">Hubungi WhatsApp JAJANANKU</a>
+            </div>
+            <button class="recovery-secondary" type="button" onclick="closeRecovery();openAuth('login')">Kembali ke Login</button>
+          </form>
+        </section>
+      </div>
+
+      <div id="promoModal" class="dialog-overlay" onclick="if(event.target===event.currentTarget)closePromo()">
+        <section class="dialog promo-card">
+          <button class="promo-x" type="button" onclick="closePromo()">×</button>
+          <div class="promo-image-wrap">
+            <img id="promoImage" alt="Promo JAJANANKU" hidden>
+          </div>
+          <div id="promoFallback" class="promo-fallback">
+            <div class="promo-top-label">PROMO SPESIAL</div>
+            <div class="promo-main-copy">
+              <small>Diskon Hingga</small>
+              <strong id="promoBig">50%</strong>
+              <b>Untuk Semua Jajanan Pilihan</b>
+            </div>
+            <div class="promo-gift gift-a">🎁</div>
+            <div class="promo-gift gift-b">🎉</div>
+            <svg class="hero-mascot" viewBox="0 0 120 120" aria-hidden="true" style="width:84px;height:84px;margin:0 auto">
+              <circle cx="60" cy="60" r="56" fill="rgba(255,255,255,.2)"/>
+              <rect x="40" y="38" width="40" height="32" rx="14" fill="#fff"/>
+              <circle cx="52" cy="54" r="3.4" fill="#7c3aed"/>
+              <circle cx="68" cy="54" r="3.4" fill="#7c3aed"/>
+              <path d="M50 62 Q60 69 70 62" stroke="#7c3aed" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <line x1="60" y1="38" x2="60" y2="26" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="60" cy="22" r="4" fill="#7c3aed"/>
+            </svg>
+          </div>
+          <div class="promo-copy">
+            <small>SPESIAL UNTUK KAMU!</small>
+            <h2 id="promoTitle">Diskon Hingga 50%</h2>
+            <p id="promoText">Belanja lebih hemat dengan promo pilihan JAJANANKU.</p>
+            <a id="promoButton" class="promo-primary" href="#/explore" onclick="closePromo()">Lihat Promo Sekarang <span>→</span></a>
+            <button class="promo-later" type="button" id="promoClose" onclick="closePromo()">Nanti</button>
+          </div>
+        </section>
+      </div>
+
+      <div id="toast" class="toast"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
